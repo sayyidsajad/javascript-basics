@@ -1,10 +1,10 @@
-const apples = {name: 'Apples'};
-const bananas = {name: 'Bananas'};
-const oranges = {name: 'Oranges'};
+let map = new Map();
 
-const fruits = new Map();
+map.set("1", "str1"); // a string key
+map.set(1, "num1"); // a numeric key
+map.set(true, "bool1"); // a boolean key
 
-fruits.set(apples, 500);
-fruits.set(bananas, 300);
-fruits.set(oranges, 200);
-console.log(fruits.get(apples));
+console.log(map["1"]); // 'num1'
+console.log(map.get("1")); // 'str1'
+console.log(map.size); // 3
+console.log(map.keys());
