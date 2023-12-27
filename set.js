@@ -15,5 +15,5 @@ set.add(mary);
 console.log( set.size ); // 3
 
 for (let user of set) {
-    console.log(user); // John (then Pete and Mary)
+    console.log(user); 
 }
