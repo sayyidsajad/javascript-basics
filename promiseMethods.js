@@ -1,6 +1,21 @@
-const promise1 = Promise.resolve("Hello world");
-const promise2 = Promise.reject("Rejecting");
-const promises = [promise1, promise2];
-Promise.allSettled([promise1, promise2]).then((result) =>
-  result.forEach((res) => console.log(res))
-);
+const pro1 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("one"), 200);
+});
+
+const pro2 = new Promise((resolve, reject) => {
+  setTimeout(() => reject("two"), 100);
+});
+
+const pro3 = new Promise((resolve, reject) => {
+  setTimeout(() => reject("rejected"), 300);
+});
+
+const pro4 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("four"), 400);
+});
+
+Promise.allSettled([pro1, pro2, pro3, pro4])
+  .then((val) => console.log(val))
+  .catch((err) => {
+    console.log(err);
+  });

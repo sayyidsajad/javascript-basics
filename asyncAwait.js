@@ -1,8 +1,8 @@
-async function myDisplay() {
-    let myPromise = new Promise(function(resolve, reject) {
-      resolve("I love You !!");
-    });
-    document.getElementById("demo").innerHTML = await myPromise;
-  }
-  
-  myDisplay();
+const getData = async () => {
+  let y = await "Hello World";
+  console.log(y);
+}
+
+getData();
+console.log(1);
+console.log(2);
