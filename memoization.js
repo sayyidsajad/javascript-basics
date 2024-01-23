@@ -8,7 +8,6 @@ function memoize(key, value) {
   return cache[key];
 }
 
-memoize('a',2)
-memoize('a',3)
-memoize('b',2)
-
+memoize("a", 2);
+memoize("a", 3);
+memoize("b", 2);
