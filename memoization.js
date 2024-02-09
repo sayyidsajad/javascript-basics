@@ -10,4 +10,3 @@ function memoize(key, value) {
 
 memoize("a", 2);
 memoize("a", 3);
-memoize("b", 2);
